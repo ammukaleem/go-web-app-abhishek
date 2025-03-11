@@ -19,7 +19,7 @@ FROM gcr.io/distroless/base
 
 # Copy the built binary from the builder stage
 COPY --from=builder /app/main .
-COPY --from=base /app/static ./static 
+COPY --from=builder /app/static ./static 
 
 # Expose the application port
 EXPOSE 8080
