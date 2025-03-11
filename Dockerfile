@@ -14,6 +14,9 @@ COPY . .
 # Build the Go application
 RUN go build -o go-web-app
 
+# Use a minimal base image for deployment
+FROM alpine:latest
+
 # Set working directory inside the minimal image
 WORKDIR /app
 
