@@ -43,6 +43,11 @@ jobs:
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.56.2
+    - name: Clear Go module cache
+      run: |
+        go clean -modcache
+        go mod tidy
+        go mod download    
   
   push:
     runs-on: ubuntu-latest
