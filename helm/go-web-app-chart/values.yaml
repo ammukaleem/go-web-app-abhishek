@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: dockaleem/go-web-app 
   pullPolicy: IfNotPresent
-  tag: "13871547121"
+  tag: "13871656127"
 
 ingress:
   enabled: false
